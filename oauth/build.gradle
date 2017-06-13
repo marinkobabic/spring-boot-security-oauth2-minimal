@@ -37,10 +37,10 @@ dependencies {
     // By excluding Tomcat from starter-web and adding it as a provided dependency,
     // we can deploy as a WAR on a servlet container or run as a standalone application
     compile(group: 'org.springframework.boot', name: 'spring-boot-starter-web') {
-        exclude(module: 'spring-boot-starter-tomcat')
-        exclude(group: 'org.apache.tomcat.embed')
+        //exclude(module: 'spring-boot-starter-tomcat')
+        //exclude(group: 'org.apache.tomcat.embed')
     }
-    providedCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat')
+    compile(group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat')
 
     compile(group: 'org.springframework.boot', name: 'spring-boot-starter-security')
     compile(group: 'org.springframework.security', name: 'spring-security-jwt', version: '1.0.3.RELEASE')
